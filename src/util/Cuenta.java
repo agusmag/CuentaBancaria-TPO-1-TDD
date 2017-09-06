@@ -26,4 +26,8 @@ public class Cuenta {
 	public void VaciarCuenta(){
 		this.monto = 0;
 	}
+	
+	 public void FusionarCon(Cuenta B){
+		this.monto += B.monto;
+	}
 }

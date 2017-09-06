@@ -52,7 +52,7 @@ public class CuentasTest {
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.IngresarMonto(250);
 		cuentaB.IngresarMonto(310);
-		FusionarCuentas(cuentaA, cuentaA, cuentaB);
+		cuentaA.FusionarCon(cuentaB);
 		Assert.assertTrue(cuentaA.SaldoDeCuenta() == 560);
 	}
 	
