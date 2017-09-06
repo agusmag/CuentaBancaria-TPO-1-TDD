@@ -36,7 +36,7 @@ public class CuentasTest {
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.SumarMonto(100);
 		cuentaA.TransferirMontoA(400,cuentaB);
-		Assert.assertTrue(cuentaB.Estado() == 400 && cuentaA.Estado() == 0);
+		Assert.assertTrue(cuentaB.Estado() == 0 && cuentaA.Estado() == 100);
 	}
 	
 }
