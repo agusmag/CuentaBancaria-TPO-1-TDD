@@ -10,6 +10,17 @@ public class Cuenta {
 	public double SaldoDeCuenta() {
 		return this.monto;
 	}
+	
+	public String Estado(){
+		String estado;
+		if (this.monto >= 0){
+			estado = "Positivo";
+		}else{
+			estado = "Negativo";
+		}
+		
+		return estado;
+	}
 
 	public void IngresarMonto(double monto) {
 		this.monto += Math.abs(monto);
@@ -36,4 +47,5 @@ public class Cuenta {
 		this.monto += B.monto;
 		B.monto = 0;
 	}
+	
 }
