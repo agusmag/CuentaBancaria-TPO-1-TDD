@@ -30,4 +30,13 @@ public class CuentasTest {
 		Assert.assertTrue(cuentaB.Estado() == 100 && cuentaA.Estado() == 0);
 	}
 	
+	@Test
+	public void TransferirMasDelCapital(){ //Verifica que si quiero transferir mas del monto que posee una cuenta no opera
+		Cuenta cuentaA = new Cuenta();
+		Cuenta cuentaB = new Cuenta();
+		cuentaA.SumarMonto(100);
+		cuentaA.TransferirMontoA(400,cuentaB);
+		Assert.assertTrue(cuentaB.Estado() == 400 && cuentaA.Estado() == 0);
+	}
+	
 }
