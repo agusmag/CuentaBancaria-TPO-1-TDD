@@ -29,5 +29,6 @@ public class Cuenta {
 	
 	 public void FusionarCon(Cuenta B){
 		this.monto += B.monto;
+		B.monto = 0;
 	}
 }
