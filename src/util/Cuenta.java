@@ -16,6 +16,10 @@ public class Cuenta {
 		this.monto += monto;
 	}
 	
+	public void ExtraerMonto(double monto){
+		this.monto -= monto;
+	}
+	
 	public void TransferirMontoA(double monto,Cuenta otra){
 		if (this.monto - monto >= 0){
 			this.monto -= monto;
