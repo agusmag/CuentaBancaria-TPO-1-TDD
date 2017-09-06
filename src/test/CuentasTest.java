@@ -21,4 +21,13 @@ public class CuentasTest {
 		Assert.assertTrue(cuentaA.Estado() == 40);
 	}
 	
+	@Test
+	public void TransferirMontoA(){ //Verifica que se transfiera un monto de una cuenta a otra.
+		Cuenta cuentaA = new Cuenta();
+		Cuenta cuentaB = new Cuenta();
+		cuentaA.SumarMonto(100);
+		cuantaA.TransferirMontoA(cuentaB);
+		Assert.assertTrue(cuentaB.Estado() == 100 && cuentaA.Estado() == 0);
+	}
+	
 }
