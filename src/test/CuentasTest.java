@@ -47,13 +47,14 @@ public class CuentasTest {
 		Assert.assertTrue(cuentaA.SaldoDeCuenta() == 0);
 	}
 	
-	public void fusionarCuentas(){
+	@Test
+	public void fusionarCuentas(){ //Verifica que se fusionen 2 cuentas(una se le incrementa el monto, la otra queda en 0)
 		Cuenta cuentaA = new Cuenta();
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.IngresarMonto(250);
 		cuentaB.IngresarMonto(310);
 		cuentaA.FusionarCon(cuentaB);
-		Assert.assertTrue(cuentaA.SaldoDeCuenta() == 560);
+		Assert.assertTrue(cuentaA.SaldoDeCuenta() == 560 && cuentaB.SaldoDeCuenta() == 0);
 	}
 	
 }
