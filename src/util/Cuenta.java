@@ -13,12 +13,12 @@ public class Cuenta {
 	}
 	
 	public void IngresarMonto(double monto){
-		this.monto += monto;
+		this.monto += Math.abs(monto);
 	}
 	
 	public void ExtraerMonto(double monto){
 		if (this.monto > 0){
-			this.monto -= monto;
+			this.monto -= Math.abs(monto);
 		}
 	}
 	
