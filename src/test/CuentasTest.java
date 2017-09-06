@@ -22,7 +22,7 @@ public class CuentasTest {
 	}
 	
 	@Test
-	public void TransferirMontoA(){ //Verifica que se transfiera un monto de una cuenta a otra.
+	public void transferirMontoA(){ //Verifica que se transfiera un monto de una cuenta a otra.
 		Cuenta cuentaA = new Cuenta();
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.IngresarMonto(100);
@@ -31,7 +31,7 @@ public class CuentasTest {
 	}
 	
 	@Test
-	public void TransferirCapitalExcedido(){ //Verifica que si quiero transferir mas del monto que posee una cuenta no opera
+	public void transferirCapitalExcedido(){ //Verifica que si quiero transferir mas del monto que posee una cuenta no opera
 		Cuenta cuentaA = new Cuenta();
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.IngresarMonto(100);
@@ -40,13 +40,20 @@ public class CuentasTest {
 	}
 	
 	@Test
-	public void VaciarCuenta(){ //Verifica que si vacio una cuenta, ponga su monto en 0
+	public void vaciarCuenta(){ //Verifica que si vacio una cuenta, ponga su monto en 0
 		Cuenta cuentaA = new Cuenta();
 		cuentaA.IngresarMonto(1500);
 		cuentaA.VaciarCuenta();
 		Assert.assertTrue(cuentaA.SaldoDeCuenta() == 0);
 	}
 	
-	
+	public void fusionarCuentas(){
+		Cuenta cuentaA = new Cuenta();
+		Cuenta cuentaB = new Cuenta();
+		cuentaA.IngresarMonto(250);
+		cuentaB.IngresarMonto(310);
+		FusionarCuentas(cuentaA, cuentaA, cuentaB);
+		Assert.assertTrue(cuentaA.SaldoDeCuenta() == 560);
+	}
 	
 }
