@@ -22,4 +22,8 @@ public class Cuenta {
 			otra.monto += monto;
 		}
 	}
+	
+	public void VaciarCuenta(){
+		this.monto = 0;
+	}
 }
