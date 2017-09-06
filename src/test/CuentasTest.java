@@ -17,7 +17,7 @@ public class CuentasTest {
 	@Test
 	public void SumarMonto(){ //Verifica que se sume un monto determinado a una cuenta;
 		Cuenta cuentaA = new Cuenta();
-		cuentaA.sumarMonto(40);
+		cuentaA.SumarMonto(40);
 		Assert.assertTrue(cuentaA.Estado() == 40);
 	}
 	

@@ -11,4 +11,8 @@ public class Cuenta {
 	public double Estado(){
 		return this.monto;
 	}
+	
+	public void SumarMonto(double monto){
+		this.monto += monto;
+	}
 }
