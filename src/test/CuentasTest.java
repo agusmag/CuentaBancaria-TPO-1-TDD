@@ -25,8 +25,8 @@ public class CuentasTest {
 	public void restarMonto(){ //Verifica que se reste correctamente un monto a una determinada cuenta
 		Cuenta cuentaA = new Cuenta();
 		cuentaA.IngresarMonto(100);
-		cuentaA.ExtraerMonto(50);
-		Assert.assertTrue(cuentaA.SaldoDeCuenta() == 50);
+		cuentaA.ExtraerMonto(150);
+		Assert.assertTrue(cuentaA.SaldoDeCuenta() == -50);
 	}
 	
 	@Test
