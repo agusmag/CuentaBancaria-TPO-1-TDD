@@ -8,11 +8,11 @@ public class Cuenta {
 		this.monto = 0;
 	}
 	
-	public double Estado(){
+	public double SaldoDeCuenta(){
 		return this.monto;
 	}
 	
-	public void SumarMonto(double monto){
+	public void IngresarMonto(double monto){
 		this.monto += monto;
 	}
 	
