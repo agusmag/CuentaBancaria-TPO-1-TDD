@@ -72,5 +72,16 @@ public class CuentasTest {
 		cuentaA.FusionarCon(cuentaB);
 		Assert.assertTrue(cuentaA.SaldoDeCuenta() == 560 && cuentaB.SaldoDeCuenta() == 0);
 	}
+	
+	@Test
+	public void EstadoDeLaCuenta() { //Verifica que indique si la cuenta esta con 
+									 //Saldo positivo o Negativo
+		Cuenta cuentaA = new Cuenta();
+		Cuenta cuentaB = new Cuenta();
+		cuentaA.IngresarMonto(150);
+		cuentaB.ExtraerMonto(100);
+		Assert.assertTrue(cuentaA.Estado() == "Positivo" && cuentaB.Estado() == "Negativo");
+	}
+	
 
 }
