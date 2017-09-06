@@ -15,4 +15,9 @@ public class Cuenta {
 	public void SumarMonto(double monto){
 		this.monto += monto;
 	}
+	
+	public void TransferirMontoA(double monto,Cuenta otra){
+		otra.monto = this.monto;
+		this.monto = 0;
+	}
 }

@@ -26,7 +26,7 @@ public class CuentasTest {
 		Cuenta cuentaA = new Cuenta();
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.SumarMonto(100);
-		cuantaA.TransferirMontoA(cuentaB);
+		cuentaA.TransferirMontoA(100,cuentaB);
 		Assert.assertTrue(cuentaB.Estado() == 100 && cuentaA.Estado() == 0);
 	}
 	
